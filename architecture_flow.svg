@@ -1,0 +1,139 @@
+<svg width="1400" height="820" viewBox="0 0 1400 820" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1">
+      <stop offset="0%" stop-color="#f5f9ff"/>
+      <stop offset="100%" stop-color="#edf4ff"/>
+    </linearGradient>
+    <linearGradient id="blueBox" x1="0" x2="1">
+      <stop offset="0%" stop-color="#dfeeff"/>
+      <stop offset="100%" stop-color="#cbe1ff"/>
+    </linearGradient>
+    <linearGradient id="greenBox" x1="0" x2="1">
+      <stop offset="0%" stop-color="#e5f9ee"/>
+      <stop offset="100%" stop-color="#d7f0e1"/>
+    </linearGradient>
+    <linearGradient id="goldBox" x1="0" x2="1">
+      <stop offset="0%" stop-color="#fff2cf"/>
+      <stop offset="100%" stop-color="#fae7b2"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="6" stdDeviation="8" flood-color="#90b5ea" flood-opacity="0.25"/>
+    </filter>
+    <marker id="arrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
+      <path d="M0,0 L12,6 L0,12 z" fill="#3d6bb3"/>
+    </marker>
+    <style>
+      .title { font: 700 30px 'Segoe UI', Arial, sans-serif; fill: #123a76; }
+      .label { font: 600 18px 'Segoe UI', Arial, sans-serif; fill: #1f2d3d; }
+      .small { font: 500 15px 'Segoe UI', Arial, sans-serif; fill: #1f2d3d; }
+      .boxTitle { font: 700 20px 'Segoe UI', Arial, sans-serif; fill: #103a72; }
+      .boxText { font: 500 15px 'Segoe UI', Arial, sans-serif; fill: #1e2b3b; }
+      .arrow { stroke: #3d6bb3; stroke-width: 3; fill: none; marker-end: url(#arrow); }
+      .subarrow { stroke: #5d7fb9; stroke-width: 2.5; fill: none; marker-end: url(#arrow); }
+      .panel { fill: url(#bg); stroke: #c6d9f9; stroke-width: 2; }
+    </style>
+  </defs>
+
+  <rect x="0" y="0" width="1400" height="820" fill="url(#bg)"/>
+  <text x="700" y="58" text-anchor="middle" class="title">Student Academic Performance and Attendance Analytics Dashboard</text>
+
+  <!-- Top row blocks -->
+  <g filter="url(#shadow)">
+    <rect x="70" y="110" width="200" height="120" rx="18" fill="url(#blueBox)" stroke="#8bb5eb" stroke-width="2"/>
+    <text x="170" y="150" text-anchor="middle" class="boxTitle">1. Data Source</text>
+    <text x="170" y="178" text-anchor="middle" class="boxText">student_performance.csv</text>
+    <text x="170" y="202" text-anchor="middle" class="boxText">or uploaded CSV</text>
+  </g>
+
+  <g filter="url(#shadow)">
+    <rect x="360" y="110" width="220" height="120" rx="18" fill="url(#blueBox)" stroke="#8bb5eb" stroke-width="2"/>
+    <text x="470" y="150" text-anchor="middle" class="boxTitle">2. App Load</text>
+    <text x="470" y="178" text-anchor="middle" class="boxText">Streamlit app</text>
+    <text x="470" y="202" text-anchor="middle" class="boxText">app.py initializes</text>
+  </g>
+
+  <g filter="url(#shadow)">
+    <rect x="660" y="110" width="220" height="120" rx="18" fill="url(#greenBox)" stroke="#8ec6a3" stroke-width="2"/>
+    <text x="770" y="150" text-anchor="middle" class="boxTitle">3. Validation</text>
+    <text x="770" y="178" text-anchor="middle" class="boxText">Check required fields</text>
+    <text x="770" y="202" text-anchor="middle" class="boxText">validate numeric ranges</text>
+  </g>
+
+  <g filter="url(#shadow)">
+    <rect x="960" y="110" width="210" height="120" rx="18" fill="url(#greenBox)" stroke="#8ec6a3" stroke-width="2"/>
+    <text x="1065" y="150" text-anchor="middle" class="boxTitle">4. Derived Metrics</text>
+    <text x="1065" y="178" text-anchor="middle" class="boxText">Marks %</text>
+    <text x="1065" y="202" text-anchor="middle" class="boxText">Grade / Pass / Fail</text>
+  </g>
+
+  <!-- arrow row -->
+  <line x1="270" y1="170" x2="360" y2="170" class="arrow"/>
+  <line x1="580" y1="170" x2="660" y2="170" class="arrow"/>
+  <line x1="880" y1="170" x2="960" y2="170" class="arrow"/>
+
+  <!-- middle row left -->
+  <g filter="url(#shadow)">
+    <rect x="190" y="310" width="210" height="140" rx="18" fill="url(#blueBox)" stroke="#8bb5eb" stroke-width="2"/>
+    <text x="295" y="350" text-anchor="middle" class="boxTitle">5. Filters</text>
+    <text x="295" y="380" text-anchor="middle" class="boxText">Class</text>
+    <text x="295" y="404" text-anchor="middle" class="boxText">Subject</text>
+    <text x="295" y="428" text-anchor="middle" class="boxText">Semester / Grade</text>
+  </g>
+
+  <g filter="url(#shadow)">
+    <rect x="465" y="300" width="260" height="170" rx="18" fill="url(#goldBox)" stroke="#e2c56a" stroke-width="2"/>
+    <text x="595" y="340" text-anchor="middle" class="boxTitle">6. KPI Engine</text>
+    <text x="595" y="372" text-anchor="middle" class="boxText">Total Students</text>
+    <text x="595" y="395" text-anchor="middle" class="boxText">Average Marks</text>
+    <text x="595" y="418" text-anchor="middle" class="boxText">Average Attendance</text>
+    <text x="595" y="441" text-anchor="middle" class="boxText">Pass Rate / Fail Rate</text>
+  </g>
+
+  <g filter="url(#shadow)">
+    <rect x="790" y="300" width="260" height="170" rx="18" fill="url(#goldBox)" stroke="#e2c56a" stroke-width="2"/>
+    <text x="920" y="340" text-anchor="middle" class="boxTitle">7. Chart Layer</text>
+    <text x="920" y="372" text-anchor="middle" class="boxText">Subject / Class trends</text>
+    <text x="920" y="395" text-anchor="middle" class="boxText">Attendance plots</text>
+    <text x="920" y="418" text-anchor="middle" class="boxText">Grade distribution</text>
+    <text x="920" y="441" text-anchor="middle" class="boxText">Risk chart</text>
+  </g>
+
+  <!-- center arrow flow -->
+  <line x1="400" y1="380" x2="465" y2="380" class="subarrow"/>
+  <line x1="725" y1="380" x2="790" y2="380" class="subarrow"/>
+
+  <!-- lower row -->
+  <g filter="url(#shadow)">
+    <rect x="340" y="560" width="270" height="150" rx="18" fill="url(#greenBox)" stroke="#8ec6a3" stroke-width="2"/>
+    <text x="475" y="600" text-anchor="middle" class="boxTitle">8. Risk Analysis</text>
+    <text x="475" y="630" text-anchor="middle" class="boxText">Student-level aggregation</text>
+    <text x="475" y="654" text-anchor="middle" class="boxText">High / Medium / Low risk</text>
+    <text x="475" y="678" text-anchor="middle" class="boxText">Support actions</text>
+  </g>
+
+  <g filter="url(#shadow)">
+    <rect x="690" y="560" width="270" height="150" rx="18" fill="url(#greenBox)" stroke="#8ec6a3" stroke-width="2"/>
+    <text x="825" y="600" text-anchor="middle" class="boxTitle">9. Records + Reports</text>
+    <text x="825" y="630" text-anchor="middle" class="boxText">Student records table</text>
+    <text x="825" y="654" text-anchor="middle" class="boxText">CSV download exports</text>
+    <text x="825" y="678" text-anchor="middle" class="boxText">Filtered reports</text>
+  </g>
+
+  <!-- vertical flow from middle to lower -->
+  <line x1="595" y1="470" x2="595" y2="560" class="subarrow"/>
+  <line x1="920" y1="470" x2="920" y2="560" class="subarrow"/>
+
+  <!-- final output -->
+  <g filter="url(#shadow)">
+    <rect x="1040" y="575" width="250" height="120" rx="18" fill="#dfe9ff" stroke="#9ab5eb" stroke-width="2"/>
+    <text x="1165" y="620" text-anchor="middle" class="boxTitle">10. User Output</text>
+    <text x="1165" y="648" text-anchor="middle" class="boxText">Dashboard visualization</text>
+    <text x="1165" y="672" text-anchor="middle" class="boxText">Academic insight reports</text>
+  </g>
+
+  <line x1="960" y1="635" x2="1040" y2="635" class="arrow"/>
+
+  <!-- footer annotation -->
+  <rect x="120" y="745" width="1160" height="45" rx="12" fill="#edf4ff" stroke="#cfe1ff" stroke-width="1.5"/>
+  <text x="700" y="775" text-anchor="middle" class="small">Flow: CSV data → validation → derived metrics → filters → KPI calculations → charts/risk summaries → downloadable academic reports</text>
+</svg>
